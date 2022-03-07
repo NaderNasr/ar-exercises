@@ -9,6 +9,7 @@ store2 = Store.create(name: 'Richmond', annual_revenue: 1260000, mens_apparel: f
 store3 = Store.create(name: 'Gastown', annual_revenue: 190000, mens_apparel: true,  womens_apparel: false )
 
 puts store1, store2, store3
+puts "Number of Stores: #{Store.count}"
 
 
 # * Burnaby (annual_revenue of 300000, carries men's and women's apparel)
