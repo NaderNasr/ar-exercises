@@ -24,15 +24,3 @@ puts "----------"
 
 @store2.employees.create(first_name: "Wayne Mark", last_name: "Rooney", hourly_rate: 90)
 @store2.employees.create(first_name: "Larry", last_name: "Page", hourly_rate: 200)
-
-@store3.employees.create(first_name: "Adam", last_name: "Sonny", hourly_rate: 120)
-@store3.employees.create(first_name: "Lucas", last_name: "Bose", hourly_rate: 20)
-
-@store4.employees.create(first_name: "Nader", last_name: "Nasr", hourly_rate: 90)
-@store4.employees.create(first_name: "Joseph", last_name: "Rani", hourly_rate: 60)
-
-@store5.employees.create(first_name: "Bob", last_name: "Loblow", hourly_rate: 20)
-@store5.employees.create(first_name: "Bill", last_name: "Gates", hourly_rate: 50)
-
-@store6.employees.create(first_name: "Elon", last_name: "Musk", hourly_rate: 30)
-@store6.employees.create(first_name: "Jeff", last_name: "Bezos", hourly_rate: 10)
