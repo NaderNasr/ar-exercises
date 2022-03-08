@@ -13,4 +13,6 @@ puts "----------"
 # 3. Output the number of stores that are generating $1M or more in annual sales. **Hint:** Chain together `where` and `size` (or `count`) Active Record methods.
 
 pp Store.sum("annual_revenue")
+pp Store.average("annual_revenue")
+
 
