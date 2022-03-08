@@ -4,8 +4,40 @@ require_relative './exercise_2'
 require_relative './exercise_3'
 require_relative './exercise_4'
 require_relative './exercise_5'
+require_relative '../lib/employee.rb'
+require_relative '../lib/store.rb'
 
 puts "Exercise 6"
 puts "----------"
 
 # Your code goes here ...
+# We haven't used the Employee class (and employees table) at all yet. If you look at this table's column structure, you'll find that it has a `store_id` (integer) column. This is a column that identifies which store each employee belongs to. It points to the `id` (integer) column of their store.
+
+# Let's tell Active Record that these two tables are in fact related via the `store_id` column.
+
+# 1. Add the following code _directly_ inside the Store model (class): `has_many :employees`
+# 2. Add the following code directly inside the Employee model (class): `belongs_to :store`
+# 3. Add some data into employees. Here's an example of one (note how it differs from how you create stores): `@store1.employees.create(first_name: "Khurram", last_name: "Virani", hourly_rate: 60)`
+# 4. Go ahead and create some more employees using the create method. You can do this by making multiple calls to create (like you have before.) No need to assign the employees to variables though. Create them through the `@store#` instance variables that you defined in previous exercises. Create a bunch under `@store1` (Burnaby) and `@store2` (Richmond). Eg: `@store1.employees.create(...)`.
+
+
+@store1.employees.create(first_name: "Khurram", last_name: "Virani", hourly_rate: 60)
+@store1.employees.create(first_name: "Jack", last_name: "Paul", hourly_rate: 40)
+
+@store2.employees.create(first_name: "Wayne Mark", last_name: "Rooney", hourly_rate: 90)
+@store2.employees.create(first_name: "Larry", last_name: "Page", hourly_rate: 200)
+
+@store3.employees.create(first_name: "Adam", last_name: "Sonny", hourly_rate: 120)
+@store3.employees.create(first_name: "Lucas", last_name: "Bose", hourly_rate: 20)
+
+@store4.employees.create(first_name: "Nader", last_name: "Nasr", hourly_rate: 90)
+@store4.employees.create(first_name: "Joseph", last_name: "Rani", hourly_rate: 60)
+
+@store5.employees.create(first_name: "Bob", last_name: "Loblow", hourly_rate: 20)
+@store5.employees.create(first_name: "Bill", last_name: "Gates", hourly_rate: 50)
+
+@store6.employees.create(first_name: "Elon", last_name: "Musk", hourly_rate: 30)
+@store6.employees.create(first_name: "Jeff", last_name: "Bezos", hourly_rate: 10)
+
+
+
