@@ -4,8 +4,6 @@ require_relative './exercise_2'
 require_relative './exercise_3'
 require_relative './exercise_4'
 require_relative './exercise_5'
-require_relative '../lib/employee.rb'
-require_relative '../lib/store.rb'
 
 puts "Exercise 6"
 puts "----------"
@@ -38,6 +36,3 @@ puts "----------"
 
 @store6.employees.create(first_name: "Elon", last_name: "Musk", hourly_rate: 30)
 @store6.employees.create(first_name: "Jeff", last_name: "Bezos", hourly_rate: 10)
-
-
-
